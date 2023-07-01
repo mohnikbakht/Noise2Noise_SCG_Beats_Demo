@@ -10,23 +10,23 @@ In this work, we introduce a deep learning architecture adapted from the Noise2N
 Overview of the proposed SCG beat denoising model. (a) The noisy SCG beat with a low SNR is fed into the model as input. (b, c) The denoising model suppresses the noise artifacts while maintaining the signal power resulting in an output SCG beat with higher SNR. (d) This higher SNR SCG beat can be used for extracting PEP and LVET features more robustly with higher accuracy. SCG: Seismocardiogram; SNR: Signal to Noise Ratio.
 
 <p align="center">
-<img src="https://github.com/mohnikbakht/Cardio_Wearable_Patch_Demo/blob/main/Images/ECG_SCG_Patch.png" alt="Image of The ECG/SCG Patch" width="600"/>
+<img src="https://github.com/mohnikbakht/Noise2Noise_SCG_Beats_Demo/blob/main/Images/figure1.png" alt="overview figure" width="600"/>
 </p>
 
 ## Architecture 
 
 The architecture of the proposed neural network. (a) The SCG beat waveforms are transformed to images using CWT. (b, c) The adapted Noise2Noise architecture proposed will receive the noisy SCG beats and output a higher SNR SCG beat as output. (d) During training, the target output is a noisy SCG beat with a different noise compared to the input noise and the model tries to minimize the loss between it’s output and this target (c) resulting in a denoised output after convergence. CWT: Continuous Wavelet Transform; SNR: Signal to Noise Ratio; SCG: Seismocardiogram.
 
-<!-- <p align="center"> -->
-<img src="https://github.com/mohnikbakht/Cardio_Wearable_Patch_Demo/blob/main/Images/SeismoNet2.png" alt="Image of SeismoNet" width="900"/>
-<!-- </p> -->
+<p align="center">
+<img src="https://github.com/mohnikbakht/Noise2Noise_SCG_Beats_Demo/blob/main/Images/figure2.png" alt="Architecture figure" width="600"/>
+</p>
 
 ## Results
 
 (a, c) Box and whisker plots showing the mean SNR improvements in both the AO and AC regions of the SCG beats for all pigs (n=6) after denoising the beats using the denoising model proposed. (b, d) RMSE results on estimated PEP and LVET tracked features on all pigs (n = 6) for both noisy SCG beats and denoised SCG beats with different amounts of noise present in the noisy beats.
 
 <p align="center">
-<img src="https://github.com/mohnikbakht/Cardio_Wearable_Patch_Demo/blob/main/Images/SCG%20patch.jpg" alt="Image of The ECG/SCG Patch" width="300"/>
+<img src="https://github.com/mohnikbakht/Noise2Noise_SCG_Beats_Demo/blob/main/Images/figure3.png" alt="results figure" width="600"/>
 </p>
 
  ## Conclusion
